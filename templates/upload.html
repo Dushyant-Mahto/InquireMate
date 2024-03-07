@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Text File</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+        body {
+            font-family: 'Madimi One', Arial, sans-serif; /* Added 'Madimi One' font */
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Push footer to bottom */
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-right: 20px; 
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px; /* Add space between form and footer */
+            align-self: center; /* Center form horizontally */
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+            display: block; /* Put each element on a new line */
+            border: 1px solid #ccc; /* Add a border for better visibility */
+            border-radius: 5px; /* Add some border radius for styling */
+            padding: 10px; /* Add padding for spacing */
+            width: 100%; /* Adjust the width to fit within the form */
+            box-sizing: border-box; /* Include padding and border in the element's total width */
+            background-color: #f9f9f9; /* Light gray background color */
+        }
+
+        input[type="file"]:hover {
+            background-color: #e9e9e9; /* Darker gray background color on hover */
+        }
+
+        input[type="file"]:focus {
+            outline: none; /* Remove default focus outline */
+            border-color: #007bff; /* Change border color on focus */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            padding: 10px 20px; /* Add padding from left and right */
+            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%); /* Glassy gradient background */
+            border-radius: 8px;
+            max-width: 80vw; /* Set maximum width to less than 100vw */
+            align-self: center; /* Center footer horizontally */
+        }
+    </style>
+</head>
+<body>
+    <h1>LLM Bootcamp 2024</h1>
+    <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+        <h1>Upload Text File</h1>
+        <input type="file" name="file" accept=".txt">
+        <input type="submit" value="Upload">
+    </form>
+    <footer>
+        SailSafe is an AI-powered system designed to enhance safety and navigation for sailors and boaters. It utilizes artificial intelligence algorithms to analyze various data inputs such as weather forecasts, maritime charts, vessel characteristics, and real-time sensor data to provide actionable insights and warnings.
+    </footer>
+</body>
+</html>

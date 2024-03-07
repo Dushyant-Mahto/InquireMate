@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #answer label {
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+
+        #response {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: 200px; /* Increased height */
+            resize: vertical; /* Allow vertical resizing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ask Question</h1>
+        <form id="question-form" action="/ask" method="post">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <label for="question">Enter your question:</label>
+            <input type="text" id="question" name="question">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="container" id="answer">
+        {% if answer %}
+        <label for="response">Response:</label>
+        <textarea id="response" rows="8" cols="50">{{ answer }}</textarea>
+        {% endif %}
+    </div>
+</body>
+</html>
