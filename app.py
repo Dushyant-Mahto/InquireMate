@@ -9,7 +9,7 @@ UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Create the uploads directory if it doesn't exist
 if not os.path.exists(UPLOAD_FOLDER):

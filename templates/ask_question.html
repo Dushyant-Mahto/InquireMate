@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #6c5ce7; /* Nice background color */
             margin: 0;
             padding: 0;
             display: flex;
@@ -14,7 +14,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            backdrop-filter: blur(5px); /* Blur effect */
         }
+
 
         h1 {
             text-align: center;
@@ -23,10 +25,13 @@
         }
 
         .container {
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0.3); /* Glassy effect */
+            border-radius: 16px; /* Glassy effect */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Glassy effect */
+            backdrop-filter: blur(3.1px); /* Glassy effect */
+            -webkit-backdrop-filter: blur(3.1px); /* Glassy effect */
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy effect */
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             margin-bottom: 20px;
         }
@@ -34,14 +39,14 @@
         label {
             display: block;
             margin-bottom: 10px;
-            color: #555;
+            color: #061c2b;
         }
 
         input[type="text"] {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #cccccc;
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
@@ -69,15 +74,20 @@
         }
 
         #response {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #cccccc;
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
             height: 200px; /* Increased height */
             resize: vertical; /* Allow vertical resizing */
         }
+
+        #question {
+            background-color: #aaa1e7; /* Desired background color */
+        }
+
     </style>
 </head>
 <body>
