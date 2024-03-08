@@ -70,7 +70,7 @@ Once the server is running, navigate to http://localhost:5000 in your web browse
 InquireMate utilizes the OpenAI API to generate responses to user queries. It employs advanced natural language processing techniques to understand and interpret questions, providing accurate and informative answers.
 
 ##
-InquireMate is developed as part of the LLM Bootcamp 2024 project, aiming to explore the intersection of artificial intelligence, machine learning, and web development. For any inquiries or feedback, please contact the project maintainers.
+InquireMate is developed as part of the LLM Bootcamp 2024 project, aiming to explore the intersection of artificial intelligence, machine learning, and web development. For any inquiries or feedback, please contact the project maintainers, @Dushyant-Mahto and @Tushnika.
 
 <div align="center">
 
