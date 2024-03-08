@@ -8,24 +8,20 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Set your OpenAI API key
 openai.api_key = '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'
 
-# Create the uploads directory if it doesn't exist
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-# Function to read text from a .txt file
 def read_text_from_txt(txt_path):
     with open(txt_path, 'r') as file:
         return file.read()
 
-# Function to make API request to OpenAI's GPT-3 model
 def generate_answer(question, context):
     prompt = f"{context}\nQuestion: {question}\nAnswer:"
-    prompt = prompt[:4000]  # Limit the prompt to 4000 tokens
+    prompt = prompt[:4000]  
     response = openai.Completion.create(
-        engine="gpt-3.5-turbo-instruct",  # Use the davinci-codex engine
+        engine="gpt-3.5-turbo-instruct", 
         prompt=prompt,
         max_tokens=150
     )
@@ -50,10 +46,8 @@ def ask_question():
     filename = request.form['filename']
     question = request.form['question']
 
-    # Read text from the uploaded .txt file
     file_text = read_text_from_txt(filename)
 
-    # Generate answer using OpenAI GPT-3 model
     answer = generate_answer(question, file_text)
     
     return render_template('ask_question.html', filename=filename, answer=answer)
