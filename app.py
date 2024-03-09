@@ -8,7 +8,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-openai.api_key = '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'
+openai.api_key = 'Enter your own open AI key here'
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
