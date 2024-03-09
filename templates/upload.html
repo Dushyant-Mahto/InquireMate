@@ -17,6 +17,9 @@
             justify-content: space-between; 
             min-height: 100vh;
             position: relative; 
+            background: url("{{ url_for('static', filename='wal1.jpeg') }}") no-repeat center;
+            background-size: cover;
+
         }
 
         h1 {
@@ -206,7 +209,7 @@
 
     <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
         <h2>Upload Text File</h2>
-        <input type="file" id="fileInput" name="file" accept=".pdf">
+        <input type="file" id="fileInput" name="file" accept=".txt">
         <input type="submit" id="uploadButton" value="Upload">
     </form>
     <footer>
