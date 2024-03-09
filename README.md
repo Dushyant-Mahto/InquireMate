@@ -74,6 +74,6 @@ InquireMate is developed as part of the LLM Bootcamp 2024 project, aiming to exp
 
 <div align="center">
 
-## Made with ❤️ and ☕️
+## Made with ❤️ by Tushnika and Dushyant.
 
 </div>

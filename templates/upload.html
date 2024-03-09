@@ -8,15 +8,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
         body {
-            font-family: 'Madimi One', Arial, sans-serif; /* Added 'Madimi One' font */
+            font-family: 'Madimi One', Arial, sans-serif; 
             background-color: #d6a1c1;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Push footer to bottom */
+            justify-content: space-between; 
             min-height: 100vh;
-            position: relative; /* Ensure relative positioning for absolute positioned elements */
+            position: relative; 
         }
 
         h1 {
@@ -24,57 +24,57 @@
             color: black;
             margin-right: 20px;
             z-index: 1; 
-        /* Ensure text is above the wave background */
+       
         }
         
 
         form {
-            background: rgba(255, 255, 255, 0.11); /* Semi-transparent white background */
-            border-radius: 16px; /* Rounded corners */
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            backdrop-filter: blur(3.1px); /* Apply blur effect */
-            -webkit-backdrop-filter: blur(3.1px); /* For Safari */
-            border: 1px solid rgba(255, 255, 255, 0.4); /* Border with transparency */
+            background: rgba(255, 255, 255, 0.11); 
+            border-radius: 16px; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+            backdrop-filter: blur(3.1px); 
+            -webkit-backdrop-filter: blur(3.1px); 
+            border: 1px solid rgba(255, 255, 255, 0.4); 
             padding: 20px;
             width: 300px;
-            margin-bottom: 20px; /* Add space between form and footer */
-            align-self: center; /* Center form horizontally */
-            z-index: 1; /* Ensure form is above the wave background */
-            position: relative; /* Ensure relative positioning for absolute positioned elements */
+            margin-bottom: 20px; 
+            align-self: center; 
+            z-index: 1; 
+            position: relative; 
         }
 
         input[type="file"] {
             margin-bottom: 15px;
-            display: block; /* Put each element on a new line */
-            border: 1px solid rgba(255, 255, 255, 0.4); /* Add a border for better visibility */
-            border-radius: 16px; /* Add some border radius for styling */
-            padding: 10px; /* Add padding for spacing */
-            width: 100%; /* Adjust the width to fit within the form */
-            box-sizing: border-box; /* Include padding and border in the element's total width */
-            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-            backdrop-filter: blur(3.1px); /* Apply a blur effect to the background */
-            -webkit-backdrop-filter: blur(3.1px); /* Apply a blur effect for webkit browsers */
+            display: block; 
+            border: 1px solid rgba(255, 255, 255, 0.4); 
+            border-radius: 16px; 
+            padding: 10px; 
+            width: 100%; 
+            box-sizing: border-box; 
+            background: rgba(255, 255, 255, 0.3); 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+            backdrop-filter: blur(3.1px); 
+            -webkit-backdrop-filter: blur(3.1px); 
         }
 
         input[type="file"]:hover {
-            background-color: #e9e9e9; /* Darker gray background color on hover */
+            background-color: #e9e9e9; 
         }
 
         input[type="file"]:focus {
-            outline: none; /* Remove default focus outline */
-            border-color: #007bff; /* Change border color on focus */
+            outline: none; 
+            border-color: #007bff; 
         }
 
         input[type="submit"] {
-            background-color: transparent; /* Green */
+            background-color: transparent; 
             color: black;
             font-size: bold;
             padding: 10px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.4); /* Add a border for better visibility */
+            border: 1px solid rgba(255, 255, 255, 0.4); 
             border-radius: 16px;
-            box-sizing: border-box; /* Include padding and border in the element's total width */
-            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+            box-sizing: border-box; 
+            background: rgba(255, 255, 255, 0.3); 
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             width: 100%;
@@ -82,26 +82,25 @@
         }
 
         input[type="submit"]:hover {
-            background-color: white; /* Darker green */
+            background-color: white; 
         }
 
         footer {
             text-align: center;
             font-size: 14px;
             color: #666;
-            padding: 10px 20px; /* Add padding from left and right */
+            padding: 10px 20px; 
             background: rgba(255, 255, 255, 0.3);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(3.1px);
             -webkit-backdrop-filter: blur(3.1px);
             border: 1px solid rgba(255, 255, 255, 0.4);
-            max-width: 80vw; /* Set maximum width to less than 100vw */
-            align-self: center; /* Center footer horizontally */
-            z-index: 1; /* Ensure footer is above the wave background */
+            max-width: 80vw; 
+            align-self: center; 
+            z-index: 1; 
         }
 
-        /* New CSS for wave background */
         @keyframes move_wave {
             0% {
                 transform: translateX(0) translateZ(0) scaleY(1)
@@ -122,7 +121,7 @@
             top: 0;
             margin: auto;
             z-index: 0;
-             /* Ensure wave background is below other elements */
+             
         }
         .waveWrapperInner {
             position: absolute;
@@ -134,7 +133,7 @@
             background-size: cover;
             background-position: center;
             
-            /*background-image: linear-gradient(to top, #7619c6 20%, #2294c3 80%);*/
+            
         }
         .bgTop {
             z-index: 15;
@@ -185,7 +184,7 @@
             margin-inline-start: 0px;
             margin-inline-end: 0px;
             font-weight: bold;
-            text-align: center; /* Center align the text */
+            text-align: center; 
         }
 
     </style>
