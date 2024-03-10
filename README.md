@@ -10,6 +10,14 @@
   <img src="https://github.com/Dushyant-Mahto/InquireMate/blob/main/LLM_Bootcamp.gif" alt="InquireMate">
 </div>
 
+## Purpose
+InquireMate addresses the common pain point faced by students when dealing with extensive text materials, such as research papers, textbooks, and historical documents. We recognize that students often struggle to sift through large volumes of text to find specific information or answers to their questions efficiently. This inefficiency can hinder their academic progress, leading to frustration and wasted time.
+
+Our project seeks to alleviate this challenge by offering a user-friendly platform where students can upload their text files and ask questions related to the content. Leveraging the Realtime Large Language Models (LLMs) available through the LLM App, InquireMate quickly analyzes the uploaded documents and provides accurate and concise answers to the user's queries in real-time.
+
+## Utilizing Realtime LLMs:
+InquireMate leverages the Realtime LLMs (Large Language Models) available through the LLM App to generate answers in real-time. When a student uploads a text file and submits a question, the system combines the uploaded content with the user's query and sends it to the LLM for analysis. The LLM processes the input data and generates a coherent response based on the context and the question asked. This real-time interaction enables students to receive immediate answers and insights from their text files, enhancing their learning experience and academic productivity.
+
 ## Installation
 
 ### Prerequisites
