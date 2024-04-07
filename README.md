@@ -7,7 +7,7 @@
 **InquireMate** is an AI-powered application that utilizes machine learning and web development technologies to provide real-time or static insights based on the RAG (Retrieval-Augmented Generation) approach. It enables users to interact with a knowledge base through natural language queries, with support for both real-time streaming data and static data sources.
 
 <div align="center">
-  <img src="https://github.com/Dushyant-Mahto/InquireMate/blob/main/llm-app.gif" alt="InquireMate">
+  <img src="https://github.com/TushnikaC/InquireMate/blob/main/llm.gif" alt="InquireMate">
 </div>
 
 ## Purpose
@@ -17,7 +17,7 @@ Our project seeks to alleviate this challenge by offering a user-friendly platfo
 
 ## Utilizing Realtime LLMs:
 InquireMate leverages the Realtime LLMs (Large Language Models) available through the LLM App to generate answers in real-time. When a student uploads a text file and submits a question, the system combines the uploaded content with the user's query and sends it to the LLM for analysis. The LLM processes the input data and generates a coherent response based on the context and the question asked. This real-time interaction enables students to receive immediate answers and insights from their text files, enhancing their learning experience and academic productivity.
-
+## For Windows:
 ## Installation
 
 ### Prerequisites
@@ -60,7 +60,8 @@ After installing the dependencies, you can run the InquireMate server locally:
 python app.py
 ```
 Once the server is running, navigate to http://localhost:5000 in your web browser to access the application.
-
+## For Linux:
+## For MacOS:
 ## Usage
 
 ### Uploading Text File
