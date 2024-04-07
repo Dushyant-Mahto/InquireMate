@@ -9,41 +9,61 @@
 
         body {
             font-family: 'Madimi One', Arial, sans-serif; 
-            background-color: #d6a1c1;
+            background-color: #1D2033;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; 
+            justify-content: center; 
             min-height: 100vh;
             position: relative; 
-            background: url("{{ url_for('static', filename='wal1.jpeg') }}") no-repeat center;
-            background-size: cover;
+        }
 
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
         }
 
         h1 {
             text-align: center;
-            color: black;
-            margin-right: 20px;
+            color: #9fb8e5;
+            margin-bottom: 20px; 
             z-index: 1; 
-       
+            margin-left: 0px;
         }
-        
+
+        .container {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .left-side, .right-side {
+            text-align: center;
+            margin-bottom: 20px; 
+        }
 
         form {
             background: rgba(255, 255, 255, 0.11); 
-            border-radius: 16px; 
+            border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
             backdrop-filter: blur(3.1px); 
             -webkit-backdrop-filter: blur(3.1px); 
-            border: 1px solid rgba(255, 255, 255, 0.4); 
+            border: 1px solid rgba(255, 255, 255, 0.4);
             padding: 20px;
-            width: 300px;
-            margin-bottom: 20px; 
+            width: 100%; 
+            max-width: 300px; 
             align-self: center; 
             z-index: 1; 
             position: relative; 
+            margin-right: 100px;
         }
 
         input[type="file"] {
@@ -70,22 +90,28 @@
         }
 
         input[type="submit"] {
-            background-color: transparent; 
-            color: black;
-            font-size: bold;
+            background-color: #878fa4;
+            color: white;
             padding: 10px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.4); 
-            border-radius: 16px;
-            box-sizing: border-box; 
-            background: rgba(255, 255, 255, 0.3); 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
             transition: background-color 0.3s;
         }
 
         input[type="submit"]:hover {
-            background-color: white; 
+            background-color: #4F52C4; 
+        }
+
+        @media (min-width: 768px) { 
+            .container {
+                flex-direction: row; 
+            }
+
+            .left-side, .right-side {
+                margin: 0 20px; 
+            }
         }
 
         footer {
@@ -123,18 +149,20 @@
             bottom: 0;
             top: 0;
             margin: auto;
-            z-index: 0;
-             
+            z-index: -1; 
         }
+
         .waveWrapperInner {
             position: absolute;
             width: 100%;
             overflow: hidden;
             height: 100%;
             bottom: -1px;
-            
-            
+            background: url("{{ url_for('static', filename='wal1.jpg') }}") no-repeat center;
+            background-size: cover;
+            z-index: -1; 
         }
+
         .bgTop {
             z-index: 15;
             opacity: 0.5;
@@ -178,6 +206,7 @@
         }
         h2 {
             display: block;
+            color: #9fb8e5;
             font-size: 1.5em;
             margin-block-start: 0.83em;
             margin-block-end: 0.83em;
@@ -190,6 +219,7 @@
     </style>
 </head>
 <body>
+    <div class="background-image"></div>
     <div class="waveWrapper waveAnimation">
         <div class="waveWrapperInner bgTop">
             <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
@@ -201,16 +231,17 @@
             <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
         </div>
     </div>
-    
-    <h1>LLM Bootcamp 2024<br>InquireMate</h1>
-
-    <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
-        <h2>Upload Text File</h2>
-        <input type="file" id="fileInput" name="file" accept=".txt">
-        <input type="submit" id="uploadButton" value="Upload">
-    </form>
-    <footer>
-        InquireMate leverages AI to provide answers and insights from uploaded files, streamlining data analysis.
-    </footer>
+    <div class="container">
+        <div class="left-side">
+            <h1>LLM Bootcamp 2024<br>InquireMate</h1>
+        </div>
+        <div class="right-side">
+            <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                <h2>Upload Text File</h2>
+                <input type="file" id="fileInput" name="file" accept=".txt">
+                <input type="submit" id="uploadButton" value="Upload">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
