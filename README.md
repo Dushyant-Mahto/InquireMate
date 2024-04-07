@@ -18,6 +18,13 @@ Our project seeks to alleviate this challenge by offering a user-friendly platfo
 ## Utilizing Realtime LLMs:
 InquireMate leverages the Realtime LLMs (Large Language Models) available through the LLM App to generate answers in real-time. When a student uploads a text file and submits a question, the system combines the uploaded content with the user's query and sends it to the LLM for analysis. The LLM processes the input data and generates a coherent response based on the context and the question asked. This real-time interaction enables students to receive immediate answers and insights from their text files, enhancing their learning experience and academic productivity.
 
+## Introduction to Pathway and Realtime Vector Indexing:
+
+Pathway is a powerful library for realtime vector indexing, enabling efficient retrieval of relevant information from large datasets. By indexing text data in vector space, Pathway facilitates fast and accurate querying, making it ideal for applications like InquireMate.
+
+## Integration of Pathway in InquireMate:
+
+InquireMate utilizes Pathway for realtime vector indexing of the knowledge base. When a user submits a question, Pathway indexes the uploaded text files and quickly retrieves relevant documents based on the query, enabling the application to generate accurate responses in real-time.
 
 ## Installation
 
