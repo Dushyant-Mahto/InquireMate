@@ -17,8 +17,11 @@ Our project seeks to alleviate this challenge by offering a user-friendly platfo
 
 ## Utilizing Realtime LLMs:
 InquireMate leverages the Realtime LLMs (Large Language Models) available through the LLM App to generate answers in real-time. When a student uploads a text file and submits a question, the system combines the uploaded content with the user's query and sends it to the LLM for analysis. The LLM processes the input data and generates a coherent response based on the context and the question asked. This real-time interaction enables students to receive immediate answers and insights from their text files, enhancing their learning experience and academic productivity.
-## For Windows:
+
+
 ## Installation
+
+### Windows Integration (Original Code):
 
 ### Prerequisites
 To set up and run InquireMate on your local machine, follow these steps:
@@ -60,8 +63,61 @@ After installing the dependencies, you can run the InquireMate server locally:
 python app.py
 ```
 Once the server is running, navigate to http://localhost:5000 in your web browser to access the application.
-## For Linux:
-## For MacOS:
+### Mac/Linux Integration (Using Pathway):
+```bash
+pip install pathway
+```
+```bash
+# app.py
+
+from flask import Flask, request, jsonify
+from openai import GPT, util
+
+app = Flask(__name__)
+
+# Initialize OpenAI API
+openai_api_key = 'your_openai_api_key'
+openai = GPT(api_key=openai_api_key)
+
+# Initialize PathwayIndex for Mac/Linux users
+from pathway import PathwayIndex
+pathway_index = PathwayIndex()
+
+@app.route('/ask', methods=['POST'])
+def ask_question():
+    # Retrieve question from user input
+    question = request.form['question']
+    
+    # Query Pathway index to retrieve relevant documents (for Mac/Linux)
+    relevant_documents = pathway_index.query(question)
+    
+    # Combine relevant documents into a single string
+    document_text = ' '.join(relevant_documents)
+    
+    # Use OpenAI API to generate response
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=document_text,
+        max_tokens=50
+    )
+    
+    # Extract response from OpenAI API result
+    response_text = response.choices[0].text.strip()
+    
+    return jsonify({'response': response_text})
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    # Handle file upload logic here
+    # Save the uploaded file to a specific location or process it in some way
+    return jsonify({'message': 'File uploaded successfully'})
+
+# Additional routes and functionalities can be added here...
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
 ## Usage
 
 ### Uploading Text File
