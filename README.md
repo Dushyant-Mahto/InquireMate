@@ -7,7 +7,7 @@
 **InquireMate** is an AI-powered application that utilizes machine learning and web development technologies to provide real-time or static insights based on the RAG (Retrieval-Augmented Generation) approach. It enables users to interact with a knowledge base through natural language queries, with support for both real-time streaming data and static data sources.
 
 <div align="center">
-  <img src="https://github.com/Dushyant-Mahto/InquireMate/blob/main/llm-app.gif" alt="InquireMate">
+  <img src="https://github.com/TushnikaC/InquireMate/blob/main/llm.gif" alt="InquireMate">
 </div>
 
 ## Purpose
